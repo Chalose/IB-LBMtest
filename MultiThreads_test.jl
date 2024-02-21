@@ -37,12 +37,17 @@ function main()
     numPy = 4  # y方向粒子数
     NumP = numPx * numPy  # 总粒子数
     ΔX = (Nx - 1) / (numPx + 1)
-    ΔY = 5 * rp  # >= 2 * 排斥势参数B
+    #ΔY = (Ny - 1) / (numPy + 1)
+    ΔY = (Ny - 20) / numPy
     XcYc_0 = zeros(2, 1, NumP)  # 粒子初始质心分布
+    #
     n = 1
     for i in 1:numPx
         for j in 1:numPy
-            XcYc_0[:, 1, n] = [i * ΔX, Ny - 1 - j * ΔY]
+            # 均匀释放
+            XcYc_0[:, 1, n] = [i * ΔX, Ny - 20 - (j - 1) * ΔY]
+            # 顶端释放
+            #XcYc_0[:, 1, n] = [i * ΔX, Ny - j * ΔY]
             n += 1
         end
     end
