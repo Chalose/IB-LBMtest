@@ -6,6 +6,6 @@
 [3] https://doi.org/10.1016/0021-9991(77)90100-0
 [4] DOI: 10.1017/S0962492902000077
 
-算例演示：
+Boycott Effect算例演示：
 ![image](Figure/jl_3SLetedyHG.gif)
 ![image](Figure/jl_rslmfG7obI.gif)
